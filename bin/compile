@@ -16,7 +16,7 @@ export_env_dir() {
 
 export_env_dir $3
 
-SLACK_MESSAGE="*$HEROKU_APP_NAME* ha sido desplegado en producción. Puedes ver las notas del despliegue en https://stayapp.atlassian.net/wiki/spaces/FRONT/pages/2234875910/Releases"
+SLACK_MESSAGE="Se ha actualizado *$HEROKU_APP_NAME* en producción.\nPuedes ver las notas de la release en https://stayapp.atlassian.net/wiki/spaces/FRONT/pages/2234875910/Releases.\nLa release mas reciente es la primera de la lista." 
 
 if [[ -z "${DEPLOY_NOTIFY_GITHUB_AUTH_TOKEN}" || -z "${DEPLOY_NOTIFY_GITHUB_ORG}" || -z "${DEPLOY_NOTIFY_GITHUB_PROJECT}" ]]; then
   # Not loading Github Data
